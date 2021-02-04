@@ -47,7 +47,7 @@ def reaction(message):
 			bot.send_message(message.chat.id,"Спасибо {0.first_name}!\nМы свяжемся с вами\nпо номеру: {1}.".format(message.from_user, message.text))
 			data.flag=False
 
-		elif data.number_ver(message.text) and len(message.text)!=10 and data.flag == True:
+		elif data.number_ver(message.text) and data.flag == True:
 			bot.send_message(message.chat.id,"Некорректно введен номер телефона.")
 			
 		else:
